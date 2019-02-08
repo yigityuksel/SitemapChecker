@@ -21,6 +21,6 @@ for index, row in df.iterrows():
      df.set_value(index,'status', get_status(row['loc']))
      print(row['loc'] + " --------- " + str(df.get_value(index, 'status')))
 
-writer = pd.ExcelWriter('results_science.xlsx', engine='xlsxwriter')
+writer = pd.ExcelWriter('results.xlsx', engine='xlsxwriter')
 df.to_excel(writer, sheet_name='Sheet1', index=False)
 writer.save()
